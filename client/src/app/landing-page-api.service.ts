@@ -11,22 +11,22 @@ export class LandingPageApiService {
 
   }
   getData() {
-    let url = "http://localhost:8000/api/getAll"
+    let url = "/api/getAll"
     return this.http.post(url, {});
   }
 
   getTrendingPageData() {
-    let url = "http://localhost:8000/api/Popular"
+    let url = "/api/Popular"
     return this.http.post(url, {});
   }
 
   getTopPicksData() {
-    let url = "http://localhost:8000/api/topPicks"
+    let url = "/api/topPicks"
     return this.http.post(url, {});
   }
 
   getTopRatedData() {
-    let url = "http://localhost:8000/api/topRated"
+    let url = "/api/topRated"
     return this.http.post(url, {});
   }
 

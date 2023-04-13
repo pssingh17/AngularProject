@@ -15,7 +15,7 @@ export class AuthApiService {
   public loginApi(data) {
     let body = { ...data, userType: "User" }
     console.log("body check", body)
-    let url = "http://localhost:8000/login"
+    let url = "/login"
     return this.http.post(url, body);
   }
 
@@ -23,7 +23,7 @@ export class AuthApiService {
   public signUpApi(data) {
     let body = { ...data, userType: "User" }
     console.log("body check", body)
-    let url = "http://localhost:8000/signUp"
+    let url = "/signUp"
     return this.http.post(url, body);
   }
   public logout() {
