@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthApiService } from './auth-api.service';
 
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   LoginToken;
  
   UserEmail 
-  isLoggedIn = false
+  isLoggedIn 
   constructor(private route:Router, private user: AuthApiService){
     let UserEmail = JSON.parse(localStorage.getItem("UserEmail"))
     if(UserEmail != undefined){
@@ -25,13 +25,17 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     this.route.events.subscribe((event)=>{
-      if (event.constructor.name === "NavigationEnd") {
+     
         this.isLoggedIn = this.user.isLoggedIn
         this.UserEmail = this.user.UserEmail
-      }
+      
     }
   )
+ 
+    this.isLoggedIn = this.user.isLoggedIn
+    this.UserEmail = this.user.UserEmail
   }
+ 
  
   logout(){
   this.user.logout()

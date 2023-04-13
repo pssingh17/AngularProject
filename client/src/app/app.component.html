@@ -23,9 +23,9 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
          <div class="customAlignAccount p-1">
-          <a *ngIf="isLoggedIn==false" routerLink="user/login" class="btn btn-dark customBtn" style="width: fit-content;">Login</a>
-          <a *ngIf="isLoggedIn==false" routerLink="user/signup" class="btn btn-dark customBtn"  style="width: fit-content;">SignUp</a>
-          <div class="dropdown"  *ngIf="isLoggedIn==true">
+          <a *ngIf="!isLoggedIn" routerLink="user/login" class="btn btn-dark customBtn" style="width: fit-content;">Login</a>
+          <a *ngIf="!isLoggedIn" routerLink="user/signup" class="btn btn-dark customBtn"  style="width: fit-content;">SignUp</a>
+          <div class="dropdown"  *ngIf="isLoggedIn">
             <button class="btn btn-secondary dropdown-toggle btn btn-dark customBtn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               {{UserEmail}}
             </button>
