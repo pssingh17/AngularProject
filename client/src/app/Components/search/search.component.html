@@ -1,0 +1,13 @@
+<!-- <p>Search Works!</p> -->
+<!-- <form class="d-flex p-1" (ngSubmit)="onSubmit()">
+    <input class="form-control me-2" [(ngModel)]="searchTerm" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" routerLink="search" type="submit">Search</button>
+</form> -->
+
+<!-- Display search results in the template -->
+<!-- <div *ngIf="searchData">
+    <ul>
+      <li *ngFor="let result of searchData">{{ result }}</li>
+    </ul>
+</div> -->
+<app-listing-card [landingPageData]="searchData"></app-listing-card>

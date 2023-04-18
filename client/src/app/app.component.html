@@ -18,10 +18,13 @@
           <li class="nav-item p-1">
             <a class="nav-link" routerLink="top-rated">Top Rated</a>
           </li>
-          <form class="d-flex p-1">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <li class="nav-item p-1">
+            <a class="nav-link" routerLink="advance-filter">Advance Filter</a>
+          </li>
+          <form class="d-flex p-1" #f = 'ngForm' (ngSubmit)="search(f)">
+            <input class="form-control me-2" name= "searchBox" type="text" placeholder="Search" aria-label="Search" ngModel>
+            <button class="btn btn-outline-success" routerLink="search" type="submit">Search</button>
+          </form>         
          <div class="customAlignAccount p-1">
           <a *ngIf="!isLoggedIn" routerLink="user/login" class="btn btn-dark customBtn" style="width: fit-content;">Login</a>
           <a *ngIf="!isLoggedIn" routerLink="user/signup" class="btn btn-dark customBtn"  style="width: fit-content;">SignUp</a>

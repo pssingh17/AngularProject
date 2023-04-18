@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthApiService } from './auth-api.service';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -11,6 +12,8 @@ import { AuthApiService } from './auth-api.service';
 export class AppComponent implements OnInit {
   title = 'frontend';
   LoginToken;
+  searchTerm: string="";
+
  
   UserEmail 
   isLoggedIn 
@@ -40,5 +43,11 @@ export class AppComponent implements OnInit {
   logout(){
   this.user.logout()
   this.isLoggedIn = this.user.isLoggedIn
+  }
+  search(f : NgForm)
+  {
+    // console.log("search");
+    // console.log(f.value.searchBox);
+    this.searchTerm = f.value.searchBox
   }
 }

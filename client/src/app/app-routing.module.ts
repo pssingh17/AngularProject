@@ -12,6 +12,8 @@ import { TopPicksDetailsComponent } from './Components/top-picks-details/top-pic
 import { TopRatedDetailsComponent } from './Components/top-rated-details/top-rated-details.component';
 import { FavoritesComponent } from './Components/favorites/favorites.component';
 import { FavoritesDetailsComponent } from './Components/favorites-details/favorites-details.component';
+import { AdvanceFilterComponent } from './Components/advance-filter/advance-filter.component';
+import { SearchComponent } from './Components/search/search.component';
 
 
 const routes: Routes = [
@@ -54,6 +56,14 @@ const routes: Routes = [
   {
     path: 'favorites/view-details/:id',
     component: FavoritesDetailsComponent
+  },
+  {
+    path: 'advance-filter',
+    component: AdvanceFilterComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
   },
   {
     path: 'user', loadChildren: () => import('./Components/user/user.module').then(mod => mod.UserModule)

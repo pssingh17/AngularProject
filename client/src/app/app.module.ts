@@ -20,6 +20,8 @@ import { TopPicksDetailsComponent } from './Components/top-picks-details/top-pic
 import { TopRatedDetailsComponent } from './Components/top-rated-details/top-rated-details.component';
 import { FavoritesComponent } from './Components/favorites/favorites.component';
 import { FavoritesDetailsComponent } from './Components/favorites-details/favorites-details.component';
+import { SearchComponent } from './Components/search/search.component';
+import { AdvanceFilterComponent } from './Components/advance-filter/advance-filter.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { FavoritesDetailsComponent } from './Components/favorites-details/favori
     TopRatedDetailsComponent,
     FavoritesComponent,
     FavoritesDetailsComponent,
+    SearchComponent,
+    AdvanceFilterComponent,
   ],
   imports: [
     BrowserModule,
